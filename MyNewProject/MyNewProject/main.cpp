@@ -5,6 +5,7 @@
 %:include <unordered_map>
 %:include <functional>
 %:include <chrono>
+%:include <ctime>
 
 
 using std::string;
