@@ -1,10 +1,10 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <unordered_set>
-#include <unordered_map>
-#include <functional>
-#include <chrono>
+%:include <iostream>
+%:include <string>
+%:include <vector>
+%:include <unordered_set>
+%:include <unordered_map>
+%:include <functional>
+%:include <chrono>
 
 
 using std::string;
@@ -30,7 +30,10 @@ string randomExerciseTime() {
 }
 
 
+#include "StartGenerator.h"
+
 
 int main() {
 	srand(time(0));
+	setlocale(LC_ALL, "Russian");
 }
