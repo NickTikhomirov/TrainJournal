@@ -30,6 +30,14 @@ string randomExerciseTime() {
 	return result;
 }
 
+string makeMood() {
+	std::vector<std::string> var = { "Хорошее", "Удовлетворительное", "Плохое" };
+	return var[rand() % 3];
+}
+
+char makeWish() {
+	return 43 + 2*(rand()%2);
+}
 
 #include "StartGenerator.h"
 #include "mainPart.h"
