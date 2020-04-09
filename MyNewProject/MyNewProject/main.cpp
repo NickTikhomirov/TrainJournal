@@ -32,6 +32,7 @@ string randomExerciseTime() {
 
 
 #include "StartGenerator.h"
+#include "mainPart.h"
 
 
 int main() {

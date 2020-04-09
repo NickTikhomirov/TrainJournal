@@ -139,10 +139,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="StartPart.cpp" />
+    <ClCompile Include="mainPart.cpp" />
+    <ClCompile Include="StartGenerator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StartPart.h" />
+    <ClInclude Include="mainPart.h" />
+    <ClInclude Include="StartGenerator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

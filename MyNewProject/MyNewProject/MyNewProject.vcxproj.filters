@@ -18,12 +18,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="StartPart.cpp">
+    <ClCompile Include="mainPart.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="StartGenerator.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StartPart.h">
+    <ClInclude Include="mainPart.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="StartGenerator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
