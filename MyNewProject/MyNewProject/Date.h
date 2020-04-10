@@ -2,16 +2,22 @@
 #include <string>
 #include <vector>
 #include <ctime>
+//srand(time(0));
+//std::time_t curtime = std::time(nullptr);
+//ВОТ ТУТ СКОЛЬКО НАМ НУЖНО ЗАНЯТИЙ
+//int N = 30;
+//ЧИСЛО МЕСЯЦА НАЧАЛА
+//int startDate = 30;
+//МЕСЯЦ НАЧАЛА
+//int startMon = 3;
+//std::vector<time_t> dates = RandomDateGenerator(N, curtime, startDate, startMon);
+// std::vector<std::string> PD = parseDateToString(dates);
 
-int startDate;
-int startMon;
 std::string weekday[] = { "Воскресенье", "Понедельник", "Вторник", "Среда","Четверг", "Пятница", "Суббота"};
 
-std::vector<time_t> dates;
-
-//Рандом дат, НЕ ТРОГАТЬ 
-void RandomDateGenerator(int N, std::time_t curtime) {
-
+//Рандом дат, НЕ ТРОГАТЬ
+std::vector<time_t> RandomDateGenerator(int N, std::time_t curtime, int startDate, int startMon ) {
+    std::vector<time_t> dates;
     tm * timeinfo = std::localtime(&curtime);
     timeinfo->tm_min = rand() % 59;
     timeinfo->tm_hour = 10 + rand() % 8;
@@ -33,6 +39,7 @@ void RandomDateGenerator(int N, std::time_t curtime) {
         std::mktime(somedate);
         dates.push_back(std::mktime(somedate));
     }
+    return dates;
 }
 
 //функция парсинга, МОЖНО ВИДОИЗМЕНЯТЬ
@@ -51,24 +58,3 @@ std::vector<std::string> parseDateToString(std::vector<time_t > datesToParse){
     return parsedData;
 }
 
-int main(){
-    srand(time(0));
-
-    std::time_t curtime = std::time(nullptr);
-
-    //ВОТ ТУТ СКОЛЬКО НАМ НУЖНО ЗАНЯТИЙ
-    int N = 30;
-    
-    //ЧИСЛО МЕСЯЦА НАЧАЛА 
-    startDate = 30;
-    //МЕСЯЦ НАЧАЛА
-    startMon = 3;
-
-    //НУ СОБСНА РАБОТА
-    RandomDateGenerator(N, curtime);
-
-    //ТУТ ПОЛУЧАЕМ СТРОКУ ЕЕ ПИХАЕМ КУДА УГОДНО
-    std::vector<std::string> PD = parseDateToString(dates);
-
-    return 0;
-}
